@@ -1,0 +1,13 @@
+<html>
+  <body>
+    {% if session %}
+        <h1>Welcome {{session.userinfo.name}}</h1>
+        <a href="/protected">Go to Protected Page</a><br>
+        <a href="/logout">Logout</a>
+        <pre>{{ pretty }}</pre>
+    {% else %}
+        <h1>Welcome Guest</h1>
+        <a href="/login">Login</a>
+    {% endif %}
+  </body>
+</html>
