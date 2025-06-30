@@ -1,0 +1,16 @@
+### 1. Access Home (Unauthenticated)
+GET http://localhost:3000/
+Accept: text/html
+
+
+### 2. Attempt Unauthorized Access to /protected
+GET http://localhost:3000/protected
+Accept: text/html
+
+
+### 3. Simulate Authenticated Access to /protected
+# NOTE: This would normally require Auth0 login flow and session cookie
+# This is just a placeholder to demonstrate intent
+GET http://localhost:3000/protected
+Cookie: session=your-mocked-session-cookie
+Accept: text/html
