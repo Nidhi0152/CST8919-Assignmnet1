@@ -53,6 +53,22 @@ This project demonstrates how to build and deploy a secure, production-ready Fla
 
 4. Run the app locally:
    ``` python server.py ```
+---
+### 3. Azure Deployment Steps
 
+1. Create Resources:
+
+- Azure App Service 
+- Log Analytics Workspace
+
+2. Deploy Code to App Service:
+
+- Use GitHub.
+- Upload the .env variables in App Service → Environment varibles.
+- Set the Startup Command in App Service → Configuration → Startup Command: ``` gunicorn -w 4 server:app ```
+  
+3. Enable Logging:
    
-
+- Go to App Service → Diagnostic settings
+- Enable AppServiceConsoleLogs and connect them to  Log Analytics workspace.  
+---
